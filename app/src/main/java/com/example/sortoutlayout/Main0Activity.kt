@@ -58,18 +58,18 @@ class Main0Activity : AppCompatActivity() {
             R.id.action_settings -> {
                 val navController = findNavController(R.id.nav_host_fragment_content_main3)
                 navController.navigateUp(appBarConfiguration)
-                navController.navigate(R.id.settingsFragment);
+                navController.navigate(R.id.settingsFragment)
 //                mainMenu.
             }
             R.id.faq -> {
                 val navController = findNavController(R.id.nav_host_fragment_content_main3)
                 navController.navigateUp(appBarConfiguration)
-                navController.navigate(R.id.faqFragment);
+                navController.navigate(R.id.faqFragment)
             }
             R.id.about -> {
                 val navController = findNavController(R.id.nav_host_fragment_content_main3)
                 navController.navigateUp(appBarConfiguration)
-                navController.navigate(R.id.aboutFragment);
+                navController.navigate(R.id.aboutFragment)
             }
             else -> {
                 return super.onOptionsItemSelected(item)

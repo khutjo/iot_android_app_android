@@ -4,16 +4,16 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="settings"
+        android:title="@string/menusettings"
         app:showAsAction="never" />
     <item
         android:id="@+id/faq"
         android:orderInCategory="100"
-        android:title="FAQ"
+        android:title="@string/menuFAQ"
         app:showAsAction="never" />
     <item
         android:id="@+id/about"
         android:orderInCategory="100"
-        android:title="About"
+        android:title="@string/menuAbout"
         app:showAsAction="never" />
 </menu>

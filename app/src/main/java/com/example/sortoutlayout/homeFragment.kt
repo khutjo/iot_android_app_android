@@ -46,7 +46,7 @@ class homeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
@@ -63,7 +63,7 @@ class homeFragment : Fragment() {
             if (!checkSharedPreferences(view)) {
                 findNavController().navigate(R.id.action_homeFragment_to_settingFragment)
             }else{
-                sendrequest("test", view)
+                sendrequest("test",)
             }
 
 
@@ -77,7 +77,9 @@ class homeFragment : Fragment() {
         _binding = null
     }
 
-    fun sendrequest(massage: String,view: View){
+    fun sendrequest(massage: String){
+        Log.i("json",massage)
+
         requestQueue = Volley.newRequestQueue(activity)
         val url = "https://espwebapi.azurewebsites.net/posttest"
         Log.i("shit","im just in")
@@ -126,7 +128,7 @@ class homeFragment : Fragment() {
     fun checkSharedPreferences(view: View): Boolean {
         var valid = true
         if (key == null || key == "") {
-            val sharedpreferences = activity?.getSharedPreferences(accesscode, Context.MODE_PRIVATE);
+            val sharedpreferences = activity?.getSharedPreferences(accesscode, MODE_PRIVATE)
             key = sharedpreferences?.getString(codekey, "")
             if (key == null || key == "") {
                 Snackbar.make(view, "Please set the access key", Snackbar.LENGTH_LONG)
@@ -135,7 +137,7 @@ class homeFragment : Fragment() {
             }
         }
         if(url == null || url == "") {
-            val sharedpreferences = activity?.getSharedPreferences(accesscode, Context.MODE_PRIVATE)
+            val sharedpreferences = activity?.getSharedPreferences(accesscode, MODE_PRIVATE)
             url = sharedpreferences?.getString(hostname, "")
             if(url == null || url == "") {
                 Snackbar.make(view, "Please set the server link", Snackbar.LENGTH_LONG)

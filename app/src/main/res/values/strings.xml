@@ -16,4 +16,9 @@
     <string name="urllink">Enter Server Link</string>
     <string name="accesscode">Enter Access code</string>
     <string name="save">Save</string>
+
+    <!--main menu-->
+    <string name="menusettings">ttings</string>
+    <string name="menuFAQ">FAQ</string>
+    <string name="menuAbout">About</string>
 </resources>

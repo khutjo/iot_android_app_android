@@ -24,7 +24,7 @@ class FAQFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFaqBinding.inflate(inflater, container, false)
         return binding.root
